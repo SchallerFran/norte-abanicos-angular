@@ -1,0 +1,131 @@
+<!DOCTYPE php>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Angular</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="app.html">
+                <img [src]="logoURL" alt="Logo">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a (click)="scrollTo('productos')">PRODUCTOS</a>
+            <a (click)="scrollTo('somos')">QUIENES SOMOS</a>
+            <a (click)="scrollTo('contacto')">CONTACTO</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="presentacion" [ngStyle]="{'background-image': 'url(' + fondoPresentacion + ')'}">
+            <div class="presentacion-content">
+                <h1>NORTE</h1>
+                <p>Abanicos de diseño. Estilo, frescura y movimiento.</p>
+                <a class="btn" (click)="scrollTo('productos')">Ver productos</a>
+            </div>
+        </section>
+
+        <section class="productos" id="productos">
+            <h2>Productos</h2>
+
+            <div class="carousel-container">
+                <button class="carousel-btn prev" (click)="scrollLeft()">&#10094;</button>
+                <div class="carousel" #carousel>
+                    <div class="card" *ngFor="let p of productos">
+                        <img [src]="p.imagen" [alt]="p.nombre">
+                        <h3>{{ p.nombre }}</h3>
+                        <p class="precio">${{ p.precio }}</p>
+                        <a class="mas-info" (click)="abrirProducto(p)">+ más info</a>
+                    </div>
+                </div>
+                <button class="carousel-btn next" (click)="scrollRight()">&#10095;</button>
+            </div>
+
+            <div class="modal-backdrop" *ngIf="productoSeleccionado" (click)="cerrarProducto()"></div>
+            <div class="modal" *ngIf="productoSeleccionado">
+                <div class="modal-content">
+                    <img [src]="productoSeleccionado.imagen" class="modal-img">
+                    <div class="modal-info">
+                        <h2>{{ productoSeleccionado.nombre }}</h2>
+                        <p class="modal-desc">{{ productoSeleccionado.descripcion }}</p>
+                        <p class="modal-precio">${{ productoSeleccionado.precio }}</p>
+                        <button class="cerrar" (click)="cerrarProducto()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="aboutUs" id="somos" [ngStyle]="{'background-image': 'url(' + fondoAbout + ')'}">
+            <div class="about-container">
+                <h2 class="about-title">¿Quienes Somos?</h2>
+                <div class="about-card">
+                    <p><strong>Somos una marca registrada de fabricación de abanicos, indumentaria y accesorios, oriunda de la Capital de la Provincia de Córdoba, Argentina.</strong></p>
+
+                    <p>Al cabo de unos meses de sus comienzos, sus particulares abanicos marcaron un hito en la moda argentina, introduciendo de forma inmediata al abanico en Argentina, trasladando esa costumbre europea respecto al uso del abanico como un accesorio de moda más.</p>
+
+                    <div class="card-columns">
+                        <div class="col">
+                            <h3>Alcance</h3>
+                            <p>En la actualidad, NORTE comercializa más de cinco mil abanicos mensuales, consolidándose como la primera marca a nivel nacional, pronto a desembarcar en Chile, Brasil y Uruguay.</p>
+                        </div>
+
+                        <div class="col">
+                            <h3>Diseños</h3>
+                            <p>La originalidad de sus diseños convierte a sus abanicos en un fenómeno que no encuentra límites de género ni de edad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <div class="contacto-container">
+                <form class="contacto-form">
+                    <h3>Envíanos tu consulta</h3>
+
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Tu nombre" required>
+
+                    <label>Email</label>
+                    <input type="email" placeholder="Tu correo" required>
+
+                    <label>Mensaje</label>
+                    <textarea rows="5" placeholder="Escribe tu consulta..." required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <div class="contacto-redes">
+                    <h3>Seguinos en redes</h3>
+
+                    <ul>
+                        <li><a href="https://instagram.com/norteabanicos" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/norteabanicos.arg" target="_blank">Facebook</a></li>
+                        <li><a href="http://www.tiktok.com/@norteabanicos" target="_blank">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="autor"> 2025 - Desarrollado por <strong>Francisco Schaller</strong> para el <strong>Curso de Desarrollo con Angular</strong></p>
+        <p class="legal">
+            Todas las imágenes, nombres de productos y redes sociales pertenecen a <strong><a href="https://norteabanicos.com/">NORTE Abanicos</a></strong>.
+        </p>
+    </footer>
+
+
+</body>
+</html>
+
+<router-outlet/>
