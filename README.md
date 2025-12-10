@@ -43,13 +43,19 @@ http://localhost:4200
 ## 🖼️ Capturas de pantalla
 
 ### Página principal
-![Página principal](src/assets/Captura%20pagina%20principal.png)
+![Página principal](src/assets/screenshots/Captura%20pagina%20principal.png)
 
 ### Productos
-![Productos](src/assets/Captura%20Productos.png)
+![Productos](src/assets/screenshots/Captura%20Productos.png)
 
 ### Modal de producto
-![Modal](src/assets/Captura%20Modal.png)
+![Modal](src/assets/screenshots/Captura%20Modal.png)
+
+### About us
+![Quienes somos](src/assets/screenshots/Captura%20quienes%20somos.PNG)
+
+### Contacto y footer
+![contacto y footer](src/assets/screenshots/Captura%20contacto%20y%20footer.PNG)
 
 ---
 
