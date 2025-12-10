@@ -18,7 +18,7 @@ Aunque la primera entrega estaba enfocada en demostrar los conceptos básicos de
 El proyecto incluye:
 - `app.component.html`: estructura principal de la página.
 - `app.component.ts`: lógica de productos, modal y navegación suave.
-- `assets/`: carpeta con imágenes utilizadas en la aplicación.
+- `public/`: carpeta con imágenes utilizadas en la aplicación.
 - Carrusel funcional con navegación izquierda/derecha.
 - Modal emergente con información detallada de productos.
 
