@@ -56,9 +56,10 @@ http://localhost:4200
 ## 👤 Autor
 - **Francisco Schaller**
 - Curso Desarrollo con Angular
+- Unidad Nro. 1
 
 ---
 
 ## 📚 Créditos y Licencias
 Las imágenes, nombres de productos y redes sociales pertenecen a **[NORTE Abanicos](https://norteabanicos.com)**.  
-Las fuentes fueron obtenidas de **[Google Fonts]((https://fonts.google.com/specimen/Outfit))**. 
+Las fuentes fueron obtenidas de **[Google Fonts](https://fonts.google.com/specimen/Outfit)**. 
