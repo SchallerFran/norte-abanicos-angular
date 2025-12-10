@@ -1,59 +1,57 @@
-# Clase1
+# Proyecto Angular - Landing Page Completa
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+Este repositorio contiene una landing page desarrollada en Angular como parte del **Curso Desarrollo con Angular – Unidad: Conociendo Angular**.  
+El proyecto presenta una página completa que incluye navegación, secciones informativas, carrusel de productos, modal dinámico, formulario de contacto y diseño totalmente responsive.
+Aunque la primera entrega estaba enfocada en demostrar los conceptos básicos de Angular, decidí aprovechar la oportunidad para desarrollar una versión más completa y funcional del proyecto, con el fin de recibir un mejor feedback y seguir mejorando.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologías utilizadas
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Google Fonts (Outfit)
+---
 
-```bash
+## 📂 Contenido del proyecto
+El proyecto incluye:
+- `app.component.html`: estructura principal de la página.
+- `app.component.ts`: lógica de productos, modal y navegación suave.
+- `assets/`: carpeta con imágenes utilizadas en la aplicación.
+- Carrusel funcional con navegación izquierda/derecha.
+- Modal emergente con información detallada de productos.
+
+---
+
+## 🛠️ Instalación y ejecución
+
+### 1. Clonar el repositorio
+git clone https://github.com/SchallerFran/norte-abanicos-angular
+
+### 2. Instalar dependencias
+npm install
+
+### 3. Ejecutar el servidor de desarrollo
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Luego abrir en el navegador:  
+http://localhost:4200
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🖼️ Capturas de pantalla
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 👤 Autor
+- **Francisco Schaller**
+- Curso Desarrollo con Angular
 
-To build the project run:
+---
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📚 Créditos y Licencias
+Las imágenes, nombres de productos y redes sociales pertenecen a **[NORTE Abanicos](https://norteabanicos.com)**.  
+Las fuentes fueron obtenidas de **[Google Fonts]((https://fonts.google.com/specimen/Outfit))**. 
